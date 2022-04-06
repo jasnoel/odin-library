@@ -66,6 +66,11 @@ function displayLibrary() {
         switchContainer.classList.add(book.read ? "on" : "off");
         const switchDiv = document.createElement("div");
 
+        switchContainer.addEventListener('click', () =>  {
+            book.read = !book.read;
+            displayLibrary();
+        });
+
         switchContainer.appendChild(switchDiv);
         readDiv.appendChild(switchContainer);
         div.appendChild(readDiv);
