@@ -77,4 +77,10 @@ function displayLibrary() {
     }
 }
 
+const addBook = document.querySelector('#add-book');
+addBook.addEventListener('click', () => {
+    addBookToLibrary();
+    displayLibrary();
+});
+
 displayLibrary();
