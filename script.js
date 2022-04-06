@@ -76,8 +76,19 @@ function displayLibrary() {
         div.appendChild(readDiv);
 
         const p = document.createElement("p");
-        p.textContent = book.bookLenght;
+        p.textContent = `${book.bookLenght} pages`;
         div.appendChild(p);
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add("delete");
+        deleteBtn.textContent = "X";
+        item.appendChild(deleteBtn);
+        deleteBtn.addEventListener("click", () => {
+            myLibrary = myLibrary.filter(myBook => book != myBook);
+            displayLibrary();
+            return;
+        });
+
         descriptionDiv.appendChild(div);
     }
 }

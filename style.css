@@ -114,3 +114,20 @@ main ul {
     width: 12px;
     height: 12px;
 }
+
+.delete {
+    position: absolute;
+    margin-left: -15px;
+    margin-top: -15px;
+    background-color: #d50000;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    border-radius: 50%;
+    border: none;
+}
+
+.delete:hover {
+    background-color: #7e0000;
+}
